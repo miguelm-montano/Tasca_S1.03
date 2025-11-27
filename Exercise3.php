@@ -5,7 +5,7 @@ Per exemple:
 
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”.*/
 
-function hasTheCharacter($words, $character) {
+function hasTheCharacter(array $words, string $character): bool {
 
     foreach($words as $word) {
         if(strpos($word, $character) === false) {
@@ -16,16 +16,23 @@ function hasTheCharacter($words, $character) {
     return true;
 }
 
-$tecnologies = ['PHP', 'Java', 'Laravel', 'Phyton'];
+$technologies = ['PHP', 'Java', 'Laravel', 'Phyton'];
 $char = "z";
 
-var_dump(hasTheCharacter($tecnologies, $char));
-
+if (hasTheCharacter($technologies, $char)) {
+    echo "All words contain '$char'.\n";
+} else {
+    echo "Not all words contain '$char'.\n";
+}
+    
 $colors = ['black', 'blue', 'brown'];
 $char2 = "b";
 
-var_dump(hasTheCharacter($colors, $char2));
-
+if (hasTheCharacter($colors, $char2)) {
+    echo "All words contain '$char2'.\n";
+} else {
+    echo "Not all words contain '$char2'.\n";
+}
 
 
 ?>

@@ -21,5 +21,5 @@ foreach($person as $key => $value) {
 
 $person["city"] = "Barcelona";
 
-echo "\n" . $person["city"];
+echo "\nCity: " . $person["city"];
 ?>

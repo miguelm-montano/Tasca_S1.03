@@ -42,7 +42,7 @@ echo implode(", ", $exclusiveGuestsList1) . "\n";
 //Exclusive guests - second list
 echo "\nExclusive guests list 2\n";
 
-$excluseGuestsList2 = array_diff($guestsList1, $guestsList2);
+$excluseGuestsList2 = array_diff($guestsList2, $guestsList1);
 echo implode(", ", $excluseGuestsList2) . "\n";
 
 ?>
