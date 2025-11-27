@@ -15,33 +15,34 @@ $guestsList2 = ['Maria', 'Segio', 'Marc', 'Adriana', 'Marta'];
 $commonGuests = [];
 
 foreach($guestsList1 as $guests) {
-    if(in_array($guests, $guestsList1)) {
+    if(in_array($guests, $guestsList2)) {
         $commonGuests[] = $guests;
     }
 }
 
 echo "Common guests:\n";
 
-var_dump($commonGuests);
+var_dump($commonGuests) . "\n";
+//or
+echo "\n" . implode(", ", $commonGuests) . "\n";
 
 //Mixed guests without repeated names
 echo "\nMixed guests avoiding repeated names\n";
 
 $mixedList = array_merge($guestsList1, $guestsList2);
 $noRepeatGuestsList = array_unique($mixedList);
-var_dump($noRepeatGuestsList);
+echo implode(", ", $noRepeatGuestsList) . "\n";
 
-//Exclusive guests first list
+//Exclusive guests - first list
 echo "\nExclusive guests list 1\n";
 
 $exclusiveGuestsList1 = array_diff($guestsList1, $guestsList2);
-var_dump($exclusiveGuestsList1);
+echo implode(", ", $exclusiveGuestsList1) . "\n";
 
-//Exclusive guests second list
+//Exclusive guests - second list
 echo "\nExclusive guests list 2\n";
 
 $excluseGuestsList2 = array_diff($guestsList1, $guestsList2);
-var_dump($excluseGuestsList2);
-
+echo implode(", ", $excluseGuestsList2) . "\n";
 
 ?>
