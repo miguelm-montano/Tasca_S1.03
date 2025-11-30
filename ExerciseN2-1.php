@@ -23,7 +23,7 @@ foreach($guestsList1 as $guests) {
 echo "Common guests:\n";
 
 var_dump($commonGuests) . "\n";
-//or
+//o tambien puedo hacer
 echo "\n" . implode(", ", $commonGuests) . "\n";
 
 //Mixed guests without repeated names
